@@ -1,8 +1,8 @@
 <h1 align="center">Pomodoro timer app</h1>
 
 <div align="center">
- <a href="">View Project |</a>
- <a href="">View Code</a>
+ <a href="https://ivandefender.github.io/Pomodoro-App/">View Project |</a>
+ <a href="https://github.com/Ivandefender/Pomodoro-App/blob/main/js/script.js">View Code</a>
 </div>
 
 <p align="center">
