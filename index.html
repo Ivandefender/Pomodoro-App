@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Pomodoro app</title>
+</head>
+
+<body>
+  <div class="main">
+
+    <h1>pomodoro</h1>
+
+    <div class="timer_modes">
+      <button class="standart btnMode btnMode_active">pomodoro</button>
+      <button class="short btnMode">short break</button>
+      <button class="long btnMode">long break</button>
+    </div>
+
+    <div class="timer_bg">
+      <div class="wrapper">
+        <div class="ring">
+          <svg width="366px" height="366px" viewBox="0 0 366 366" fill="none">
+            <circle x="0" y="0" cx="183" cy="183" r="165" stroke-width="13px"></circle>
+          </svg>
+        </div>
+        <div class="timer">
+          <div class="time">
+            <div class="minutes">
+              <input type="text" value="15" disabled>
+            </div>
+            <div class="column">:</div>
+            <div class="seconds">
+              <input type="text" value="00" disabled>
+            </div>
+          </div>
+          <button class="start">Start</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="settings">
+      <svg fill="#797F9D" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+        <path
+          d="M26.965 17.682l-2.927-2.317c.055-.448.097-.903.097-1.365 0-.462-.042-.917-.097-1.365l2.934-2.317a.702.702 0 00.167-.896l-2.775-4.851a.683.683 0 00-.847-.301l-3.454 1.407a10.506 10.506 0 00-2.345-1.379l-.52-3.71A.716.716 0 0016.503 0h-5.55a.703.703 0 00-.687.588l-.52 3.71c-.847.357-1.63.819-2.345 1.379L3.947 4.27a.691.691 0 00-.847.301L.325 9.422a.705.705 0 00.167.896l2.927 2.317c-.055.448-.097.903-.097 1.365 0 .462.042.917.097 1.365L.492 17.682a.702.702 0 00-.167.896L3.1 23.429a.683.683 0 00.847.301L7.4 22.323a10.506 10.506 0 002.345 1.379l.52 3.71c.056.329.34.588.687.588h5.55a.703.703 0 00.687-.588l.52-3.71c.847-.357 1.631-.819 2.346-1.379l3.454 1.407c.313.119.673 0 .847-.301l2.775-4.851a.705.705 0 00-.167-.896zM13.73 18.9c-2.685 0-4.857-2.191-4.857-4.9 0-2.709 2.172-4.9 4.857-4.9 2.684 0 4.856 2.191 4.856 4.9 0 2.71-2.172 4.9-4.856 4.9z" />
+      </svg>
+    </button>
+
+    <div class="settings_popup">
+      <div class="popup_name">
+        <h2 class="popup_title">Settings</h2>
+        <button class="popup_close">
+          <svg fill="#979797" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+            <path fill-rule="evenodd"
+              d="M11.95.636l1.414 1.414L8.414 7l4.95 4.95-1.414 1.414L7 8.414l-4.95 4.95L.636 11.95 5.586 7 .636 2.05 2.05.636 7 5.586l4.95-4.95z" />
+          </svg>
+        </button>
+      </div>
+      <div class="border_line"></div>
+      <div class="popup_time">
+        <h2 class="time_inner-title">TIME (MINUTES)</h2>
+        <div class="time_inner">
+          <div class="step">
+            <h4 class="input_mode">pomodoro</h4>
+            <div class="step_inner">
+              <button class="inp_btn btnUp">
+                <svg stroke="#bbbdcb" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                  <path fill="none" stroke-width="2" d="M1 6l6-4 6 4" />
+                </svg>
+              </button>
+              <input type="number" min="0" value="25" class="step_input" id="stp">
+              <button class="inp_btn btnDown">
+                <svg stroke="#bbbdcb" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                  <path fill="none" stroke-width="2" d="M1 1l6 4 6-4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="step">
+            <h4 class="input_mode">short break</h4>
+            <div class="step_inner">
+              <button class="inp_btn btnUp">
+                <svg stroke="#bbbdcb" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                  <path fill="none" stroke-width="2" d="M1 6l6-4 6 4" />
+                </svg>
+              </button>
+              <input type="number" min="0" value="5" class="step_input" id="sb">
+              <button class="inp_btn btnDown">
+                <svg stroke="#bbbdcb" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                  <path fill="none" stroke-width="2" d="M1 1l6 4 6-4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="step">
+            <h4 class="input_mode">long break</h4>
+            <div class="step_inner">
+              <button class="inp_btn btnUp">
+                <svg stroke="#bbbdcb" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                  <path fill="none" stroke-width="2" d="M1 6l6-4 6 4" />
+                </svg>
+              </button>
+              <input type="number" min="0" value="15" class="step_input" id="lb">
+              <button class="inp_btn btnDown">
+                <svg stroke="#bbbdcb" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                  <path fill="none" stroke-width="2" d="M1 1l6 4 6-4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup_fonts">
+        <h2 class="fonts_title">FONT</h2>
+        <div class="fonts_inner">
+          <div class="font1">
+            <input type="radio" id="KumbhS">
+            <label for="KumbhS">Aa</label>
+          </div>
+          <div class="font2">
+            <input type="radio" id="RobotoS">
+            <label for="RobotoS">Aa</label>
+          </div>
+          <div class="font3">
+            <input type="radio" id="SpaceM">
+            <label for="SpaceM">Aa</label>
+          </div>
+        </div>
+      </div>
+      <div class="popup_colors">
+        <h2 class="colors_title">COLOR</h2>
+        <div class="colors_inner">
+          <div class="color1">
+            <input type="radio" id="redPink">
+            <label for="redPink"></label>
+          </div>
+          <div class="color2">
+            <input type="radio" id="blue">
+            <label for="blue"></label>
+          </div>
+          <div class="color3">
+            <input type="radio" id="violet">
+            <label for="violet"></label>
+          </div>
+        </div>
+      </div>
+      <button class="popup_apply">Apply</button>
+    </div>
+
+  </div>
+
+  <div class="popup_blocked"></div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
