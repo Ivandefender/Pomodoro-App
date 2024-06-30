@@ -2,7 +2,7 @@
 
 <div align="center">
  <a href="https://ivandefender.github.io/Pomodoro-App/">View Project |</a>
- <a href="https://github.com/Ivandefender/Pomodoro-App/blob/main/js/script.js">View Code</a>
+ <a href="https://github.com/Ivandefender/Pomodoro-App">View Code</a>
 </div>
 
 <p align="center">
